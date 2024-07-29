@@ -1,14 +1,143 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-    <h1>Hu, {{ user.username }}!</h1>
-    {% for post in posts %}
-    <div>
-        <p>{{ post.author.username }} says:
-            {{ post.body }}
+    <div class="text-center mt-5">
+        <h1 class="display-4">Graxl</h1>
+        <p class="lead">
+            We're building, Graxl, a multimodal context-preserving data mask for LLMs that protects 
+            personally identifiable information(PII) while retaining essential contextual information. 
+            Researchers can use Graxl to protects PII in their training datasets used for finetuning 
+            commercial LLMs, while businesses can use the Graxl API as a masking layer for products built
+            on top of commercial LLMs like ChatGPT, Claude, and Gemini.
+            
+            Graxl is still in its infancy, but we're too excited to wait to share our progress with you.
+            While we’re not yet ready to process your large training datasets, we've built this demo for you.
+            Here, you can test the latest features and developments to see if Graxl might be useful for you.
         </p>
+        <div class="text-center mt-5">
+            <a href="{{ url_for('dashboard') }}" class="btn btn-dark btn-lg" role="button" aria-pressed="true">Try Demo</a>
+        </div>
+        <hr class="my-4">
+        <p>Check out our practical use cases and development roadmap below.</p>
     </div>
-    {% endfor %}
+    <div class="container">
+        <h3 class="mt-5 text-center">How It Works</h3>
+    </div>
 
+    <div class="container">
+        <h3 class="mt-5 text-center">Examples of Practical Use Cases</h3>
+
+        <div class="accordion" id="useCaseAccordion">
+            <!-- Autonomous Vehicles -->
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Autonomous Vehicles
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#useCaseAccordion">
+                    <div class="card-body">
+                        <strong>Pedestrian Detection and Behavior Prediction</strong><br>
+                        Scenario: Training videos blur all faces and bodies for privacy.<br>
+                        Context Loss: Obscures eye contact, hand signals, and body language, impairing the model's ability to predict pedestrian behavior accurately.<br><br>
+                        <strong>Driver Behavior Analysis</strong><br>
+                        Scenario: In-car camera footage blurs the driver's face and hands.<br>
+                        Context Loss: Loss of facial expressions and hand movements prevents detection of drowsiness, distraction, or aggressive driving.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Healthcare -->
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Healthcare
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#useCaseAccordion">
+                    <div class="card-body">
+                        <strong>Patient Monitoring Systems</strong><br>
+                        Scenario: Videos of patient activities mask faces for privacy.<br>
+                        Context Loss: Obscures expressions of pain, discomfort, or symptoms, hindering the training of health monitoring models.<br><br>
+                        <strong>Surgical Procedure Training</strong><br>
+                        Scenario: Training videos mask faces and bodies of the surgical team.<br>
+                        Context Loss: Nuanced hand movements, coordination, and teamwork are obscured, leading to incomplete training data for surgical models.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Retail and Customer Service -->
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Retail and Customer Service
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#useCaseAccordion">
+                    <div class="card-body">
+                        <strong>Customer Interaction Analysis</strong><br>
+                        Scenario: Surveillance videos blur all customer faces.<br>
+                        Context Loss: Prevents analysis of emotions, engagement, and dissatisfaction, crucial for improving customer service.<br><br>
+                        <strong>Theft Detection Systems</strong><br>
+                        Scenario: Videos used for training blur faces and bodies.<br>
+                        Context Loss: Misses suspicious behavior patterns, reducing the model's effectiveness in detecting theft.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Smart Home Systems -->
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Smart Home Systems
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#useCaseAccordion">
+                    <div class="card-body">
+                        <strong>Home Security AI</strong><br>
+                        Scenario: Home security camera footage masks all faces.<br>
+                        Context Loss: AI cannot distinguish between household members, guests, and intruders, leading to false positives or negatives.<br><br>
+                        <strong>Activity Recognition Models</strong><br>
+                        Scenario: Videos mask faces and specific body parts.<br>
+                        Context Loss: Misses cues from facial expressions and precise hand movements, affecting detection of daily activities.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education and Training -->
+            <div class="card">
+                <div class="card-header" id="headingFive">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Education and Training
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#useCaseAccordion">
+                    <div class="card-body">
+                        <strong>Online Learning Platforms</strong><br>
+                        Scenario: Classroom interaction videos blur all faces.<br>
+                        Context Loss: Obscures student engagement, understanding, and confusion, affecting personalized learning quality.<br><br>
+                        <strong>Skill Demonstration Videos</strong><br>
+                        Scenario: Training videos mask faces and hands.<br>
+                        Context Loss: Prevents accurate learning of steps and techniques, leading to incomplete training data.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h3 class="mt-5 text-center">Development Roadmap</h3>
+    </div>
+
+   
 {% endblock %}

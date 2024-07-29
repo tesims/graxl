@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h1 class="text-center">Dashboard</h1>
+        <p class="text-center">Graxl is still in its infancy, but we're too excited to wait to 
+            share our progress with you. While we’re not yet ready to process your large training 
+            datasets, we've built this demo for you. Here, you can test the latest features and 
+            developments to see how Graxl might be useful for you.
+        </p>
+        
+        <form method="post" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+
+            <div class="form-group">
+                {{ form.project_name.label(class="form-label") }}
+                {{ form.project_name(size=32, class="form-control-file") }}
+            </div>
+            <div class="form-group">
+                {{ form.sector.label(class="form-label") }}
+                {{ form.sector(size=32,class="form-control-file")  }}
+            </div>
+            <div class="form-group">
+                {{ form.country.label(class="form-label") }}
+                {{ form.country(class="form-control") }}
+            </div>
+            <div class="form-group form-check">
+                {{ form.faces.label(class="form-check-label") }}
+                {{ form.faces(class="form-check-input") }}
+            </div>
+            <div class="form-group form-check">
+                {{ form.text.label(class="form-check-label") }}
+                {{ form.text(class="form-check-input") }}
+            </div>
+            <div class="form-group">
+                {{ form.prompt.label(class="form-label") }}
+                {{ form.prompt(rows=4, cols=50, class="form-control-file") }}
+            </div>
+
+            <div class="form-group">
+                {{ form.image.label(class="form-label") }}
+                {{ form.image(class="form-control-file") }}
+            </div>
+            <div class="form-group">
+                {{ form.video.label(class="form-label") }}
+                {{ form.video(class="form-control-file") }}
+            </div>
+            <div class="form-group form-check">
+                {{ form.terms.label(class="form-check-label") }}
+                {{ form.terms(class="form-check-input") }}
+            </div>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-primary") }}
+            </div>
+        </form>
+    </div>
+{% endblock %}
+

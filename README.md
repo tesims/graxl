@@ -14,3 +14,14 @@ Features
 - **Performance Optimization:** The API is designed with performance in mind, leveraging efficient algorithms and parallel processing to minimize the impact on your application's runtime while delivering robust data protection.
 Comprehensive Logging and Monitoring: Detailed logs and monitoring capabilities are provided to track the masking process, identify potential issues, and ensure the integrity of the masked data.
 
+
+### External Frameworks 
+- **[BMF (Babit Multimedia Framework)](https://babitmf.github.io/)developed by ByteDance:** Used to process the videos.
+- **[Video LLaMa](https://github.com/DAMO-NLP-SG/Video-LLaMA)*:** Used to transcribe the video scene scene by scene.
+- **Eleven Labs API:** Used to generated masked audio with swapped PII data variables.
+- **[Presidio](https://microsoft.github.io/presidio/) by Mircrosoft:** Used to extract, label, and swap textual PII data.
+- **Story Diffusion:** Used to generate frames that mask PII data but retain important context.
+- **[EMO](https://github.com/HumanAIGC/EMO)by Alibaba:** used to re-animate facial expressions and lip-sync audio in the generated portraits 
+- **[Animate Anyone](https://humanaigc.github.io/animate-anyone/) by Alibaba:** used to re-animate body movements in the generated images  
+
+

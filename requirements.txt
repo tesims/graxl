@@ -3,3 +3,4 @@ python-dotenv
 flask-wtf
 flask-sqlalchemy
 flask-migrate
+psycopg2-binary

@@ -1,0 +1,45 @@
+body {
+    font-family: 'Noto Sans', sans-serif;
+    padding-top: 20px;
+}
+
+.navbar-brand {
+    font-family: 'Google Sans', sans-serif;
+}
+
+h1.display-4 {
+    font-family: 'Google Sans', sans-serif;
+    color: #333;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.footer {
+    padding: 20px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.footer a {
+    color: #000;
+}
+
+.text-center img {
+    max-height: 200px;
+}
+
+.text-center .btn-lg {
+    margin: 10px;
+    border-radius: 50px; /* Adjust the value as needed to make the button more oval-shaped */
+}
+
+.list-group-item {
+    font-size: 1.1em;
+}
